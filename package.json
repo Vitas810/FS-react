@@ -7,6 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
+  "nodemonConfig": {
+    "ignore": [
+      "db.json"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vitas810/FS-react.git"
@@ -20,6 +25,8 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "jsonschema": "^1.4.0",
+    "lowdb": "^1.0.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

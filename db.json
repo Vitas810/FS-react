@@ -1,0 +1,38 @@
+{
+  "expense": [
+    {
+      "id": 3,
+      "title": "12111111111",
+      "combined": false
+    },
+    {
+      "id": 3,
+      "total": 100,
+      "cat": "кино",
+      "comment": "my first",
+      "combined": false
+    },
+    {
+      "id": 3,
+      "title": "my first",
+      "combined": false
+    }
+  ],
+  "profit": [
+    {
+      "id": 3,
+      "title": "222222222222",
+      "combined": false
+    },
+    {
+      "id": 3,
+      "title": "3333333333333",
+      "combined": false
+    },
+    {
+      "id": 3,
+      "title": "my first",
+      "combined": false
+    }
+  ]
+}
