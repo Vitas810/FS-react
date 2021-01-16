@@ -2,36 +2,65 @@
   "expense": [
     {
       "id": 3,
-      "title": "12111111111",
+      "totalProfit": 1000,
+      "categoryProfit": "Кино",
+      "commentProfit": "купил билеты",
+      "dateProfit": "17.01.2021",
       "combined": false
     },
     {
-      "id": 3,
-      "total": 100,
-      "cat": "кино",
-      "comment": "my first",
+      "id": 2,
+      "totalExpense": 5000,
+      "commentExpense": "аванс",
+      "dateExpense": "17.01.2021",
       "combined": false
     },
     {
-      "id": 3,
-      "title": "my first",
+      "id": 2,
+      "totalExpense": 5000,
+      "commentExpense": "аванс",
+      "dateExpense": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": 2,
+      "totalExpense": 5000,
+      "commentExpense": "аванс",
+      "dateExpense": "17.01.2021",
       "combined": false
     }
   ],
   "profit": [
     {
-      "id": 3,
-      "title": "222222222222",
+      "id": 2,
+      "total": 5000,
+      "category": "Кино",
+      "comment": "аванс",
+      "date": "17.01.2021",
       "combined": false
     },
     {
       "id": 3,
-      "title": "3333333333333",
+      "totalProfit": 1000,
+      "categoryProfit": "Кино",
+      "commentProfit": "купил билеты",
+      "dateProfit": "17.01.2021",
       "combined": false
     },
     {
       "id": 3,
-      "title": "my first",
+      "totalProfit": 1000,
+      "categoryProfit": "Кино xxx",
+      "commentProfit": "купил билеты",
+      "dateProfit": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": 3,
+      "totalProfit": 100,
+      "categoryProfit": "Кино xxx",
+      "commentProfit": "купил билеты",
+      "dateProfit": "17.01.2021",
       "combined": false
     }
   ]
