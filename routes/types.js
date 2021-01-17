@@ -10,24 +10,37 @@ router.get('/', (req, res, next) => {
 });
 
 //types/:id
-router.get('/:id', (req, res, next) => {
-  const { id } = req.params;
-  const data = types.find((type) => String(type.id) === id);
+router.get('/:type/:id', (req, res, next) => {
+  const { type, id } = req.params;
 
-  res.json({ status: 'ok', data });
+  switch (type) {
+    case 'profit':
+      const profit = db.get('profit');
+      const dataProfit = profit.find((type) => String(type.id) === id);
+      res.json({ status: 'ok', dataProfit });
+      break;
+    case 'expense':
+      const expense = db.get('expense');
+      const dataExpense = expense.find((type) => String(type.id) === id);
+      res.json({ status: 'ok', dataExpense });
+      break;
+    default:
+      res.json({ status: 'Error, undefined type' });
+  }
 });
+
 router.post('/', (req, res, next) => {
   const { body } = req;
   console.log('body', body);
   const typeSchema = {
     type: 'object',
     properties: {
-      categoryExpense: { type: 'string' },
-      commentExpense: { type: 'string' },
-      categoryProfit: { type: 'string' },
-      commentProfit: { type: 'string' },
+      type: { type: 'string' },
+      total: { type: 'number' },
+      category: { type: 'string' },
+      comment: { type: 'string' },
     },
-    required: ['categoryProfit'],
+    required: ['type', 'total'],
     additionalProperties: false,
   };
 
@@ -36,30 +49,25 @@ router.post('/', (req, res, next) => {
     return next(new Error('INVALID_JSON_OR_API_FORMAT'));
   }
 
-  // const newType = { id: 3, title: body.title, combined: false };
-  const newExpense = {
+  const newElement = {
     id: 2,
-    totalExpense: 5000,
-    categoryExpense: body.categoryExpense,
-    commentExpense: 'аванс',
-    dateExpense: new Date().toLocaleDateString(),
+    type: body.type,
+    total: 5000,
+    category: body.category,
+    comment: 'аванс',
+    date: new Date().toLocaleDateString(),
     combined: false,
   };
-  const newProfit = {
-    id: 3,
-    totalProfit: 100,
-    categoryProfit: body.categoryProfit,
-    commentProfit: 'купил билеты',
-    dateProfit: new Date().toLocaleDateString(),
-    combined: false,
-  };
+
   try {
-    db.get('expense').push(newExpense).write();
-    db.get('profit').push(newProfit).write();
+    console.log('i am here');
+    body.type === 'Доход'
+      ? db.get('profit').push(newElement).write()
+      : db.get('expense').push(newElement).write();
   } catch (error) {
     throw new Error(error);
   }
-  res.json({ status: 'ok', data: newProfit });
+  res.json({ status: 'ok', data: newElement });
 });
 
 module.exports = router;
