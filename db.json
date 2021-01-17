@@ -1,29 +1,22 @@
 {
   "expense": [
     {
-      "id": "m7yTx8rDJ",
+      "id": "uVB6FJQUH",
       "type": "expense",
-      "total": 20000000,
-      "category": "zpll",
-      "date": "17.01.2021",
-      "combined": false
-    },
-    {
-      "id": "JFE6cbRwp",
-      "type": "expense",
-      "total": 20000000,
-      "category": "zpll",
-      "date": "17.01.2021",
-      "combined": false
-    },
-    {
-      "id": "zhdx49LWQ",
-      "type": "expense",
-      "total": 20000000,
-      "category": "zpll",
+      "total": 70000000,
+      "category": "ll",
       "date": "17.01.2021",
       "combined": false
     }
   ],
-  "profit": []
+  "profit": [
+    {
+      "id": "dSdSpvm0a",
+      "type": "profit",
+      "total": 70000000,
+      "category": "ll",
+      "date": "17.01.2021",
+      "combined": false
+    }
+  ]
 }

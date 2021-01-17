@@ -1,18 +1,16 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const error = require('./error/error');
 
 const app = express();
-const typeRoutes = require('./routes/types');
+const typeRoutes = require('./routes/routes');
 
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use('/types', typeRoutes);
+app.use(error);
 
-app.use((err, req, res, next) => {
-  const { message } = err;
-  res.json({ status: 'Error', message });
-});
 app.get('/', (req, res, next) => {
   res.send('Hello JS');
 });

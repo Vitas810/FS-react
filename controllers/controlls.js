@@ -1,35 +1,21 @@
-const express = require('express');
 const shortid = require('shortid');
-const router = express.Router();
 const db = require('../db/db');
 const { validate } = require('jsonschema');
 
-router.get('/', (req, res, next) => {
+const getTypes = (req, res, next) => {
   const profit = db.get('profit');
   const expense = db.get('expense');
   res.json({ status: 'ok', data: profit, data1: expense });
-});
+};
 
-//types/:id
-router.get('/:type/:id', (req, res, next) => {
+const getType = (req, res, next) => {
   const { type, id } = req.params;
   const typeElem = db.get(type);
   const data = typeElem.find((type) => String(type.id) === id);
   res.json({ status: 'ok', data });
-});
+};
 
-//delete
-router.delete('/:type/:id', (req, res, next) => {
-  const { type, id } = req.params;
-
-  db.get(type)
-    .remove({ id: Number(id) })
-    .write();
-
-  res.json({ status: 'ok' });
-});
-
-router.post('/', (req, res, next) => {
+const createType = (req, res, next) => {
   const { body } = req;
 
   const typeSchema = {
@@ -65,6 +51,27 @@ router.post('/', (req, res, next) => {
     throw new Error(error);
   }
   res.json({ status: 'ok', data: newElement });
-});
+};
 
-module.exports = router;
+const editTask = (req, res, next) => {
+  const { id, type } = req.params;
+  const editedTask = db.get(type).find({ id }).assign(req.body).value();
+  db.write();
+
+  res.json({ status: 'OK', data: editedTask });
+};
+
+const deleteType = (req, res, next) => {
+  const { type, id } = req.params;
+  db.get(type).remove({ id }).write();
+
+  res.json({ status: 'ok' });
+};
+
+module.exports = {
+  getTypes,
+  getType,
+  deleteType,
+  createType,
+  editTask,
+};
