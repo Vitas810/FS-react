@@ -1,0 +1,6 @@
+{
+  "category": [
+    { "id": 1, "title": "Кино", "combined": true },
+    { "id": 2, "title": "Семья", "combined": true }
+  ]
+}

@@ -3,9 +3,18 @@
     {
       "id": "uVB6FJQUH",
       "type": "expense",
-      "total": 70000000,
+      "total": 70,
       "category": "ll",
       "date": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": "z22HBJXHG",
+      "type": "expense",
+      "total": 70000000,
+      "category": "ll",
+      "comment": "privet",
+      "date": "18.01.2021",
       "combined": false
     }
   ],
@@ -13,7 +22,7 @@
     {
       "id": "dSdSpvm0a",
       "type": "profit",
-      "total": 70000000,
+      "total": 90,
       "category": "ll",
       "date": "17.01.2021",
       "combined": false

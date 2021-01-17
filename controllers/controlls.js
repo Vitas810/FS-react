@@ -5,7 +5,8 @@ const { validate } = require('jsonschema');
 const getTypes = (req, res, next) => {
   const profit = db.get('profit');
   const expense = db.get('expense');
-  res.json({ status: 'ok', data: profit, data1: expense });
+
+  res.json({ status: 'ok', profit, expense });
 };
 
 const getType = (req, res, next) => {
