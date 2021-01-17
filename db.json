@@ -1,22 +1,56 @@
 {
   "expense": [
     {
-      "id": 1,
-      "type": "Расход",
-      "total": 400,
-      "category": "breaf",
-      "comment": "кино",
-      "date": "14.01.2021",
+      "id": 2,
+      "type": "expense",
+      "total": 5000,
+      "category": "milk",
+      "comment": "аванс",
+      "date": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": 2,
+      "type": "expense",
+      "total": 20000000,
+      "category": "zpll",
+      "date": "17.01.2021",
       "combined": false
     }
   ],
   "profit": [
     {
-      "id": 1,
-      "type": "Доход",
+      "id": 2,
+      "type": "profit",
       "total": 5000,
-      "category": "breaf",
+      "category": "zp",
       "comment": "аванс",
+      "date": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": 2,
+      "type": "profit",
+      "total": 5000,
+      "category": "zp",
+      "comment": "аванс",
+      "date": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": 2,
+      "type": "profit",
+      "total": 2000,
+      "category": "zp",
+      "comment": "аванс",
+      "date": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": 2,
+      "type": "profit",
+      "total": 20000000,
+      "category": "zpll",
       "date": "17.01.2021",
       "combined": false
     }
