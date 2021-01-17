@@ -1,4 +1,5 @@
 const express = require('express');
+const shortid = require('shortid');
 const router = express.Router();
 const db = require('../db/db');
 const { validate } = require('jsonschema');
@@ -49,7 +50,7 @@ router.post('/', (req, res, next) => {
   }
 
   const newElement = {
-    id: 2,
+    id: shortid.generate(),
     type: body.type,
     total: body.total,
     category: body.category,

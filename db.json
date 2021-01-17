@@ -1,16 +1,23 @@
 {
   "expense": [
     {
-      "id": 2,
+      "id": "m7yTx8rDJ",
       "type": "expense",
-      "total": 5000,
-      "category": "milk",
-      "comment": "аванс",
+      "total": 20000000,
+      "category": "zpll",
       "date": "17.01.2021",
       "combined": false
     },
     {
-      "id": 2,
+      "id": "JFE6cbRwp",
+      "type": "expense",
+      "total": 20000000,
+      "category": "zpll",
+      "date": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": "zhdx49LWQ",
       "type": "expense",
       "total": 20000000,
       "category": "zpll",
@@ -18,41 +25,5 @@
       "combined": false
     }
   ],
-  "profit": [
-    {
-      "id": 2,
-      "type": "profit",
-      "total": 5000,
-      "category": "zp",
-      "comment": "аванс",
-      "date": "17.01.2021",
-      "combined": false
-    },
-    {
-      "id": 2,
-      "type": "profit",
-      "total": 5000,
-      "category": "zp",
-      "comment": "аванс",
-      "date": "17.01.2021",
-      "combined": false
-    },
-    {
-      "id": 2,
-      "type": "profit",
-      "total": 2000,
-      "category": "zp",
-      "comment": "аванс",
-      "date": "17.01.2021",
-      "combined": false
-    },
-    {
-      "id": 2,
-      "type": "profit",
-      "total": 20000000,
-      "category": "zpll",
-      "date": "17.01.2021",
-      "combined": false
-    }
-  ]
+  "profit": []
 }
