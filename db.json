@@ -7,15 +7,6 @@
       "category": "ll",
       "date": "17.01.2021",
       "combined": false
-    },
-    {
-      "id": "z22HBJXHG",
-      "type": "expense",
-      "total": 70000000,
-      "category": "ll",
-      "comment": "privet",
-      "date": "18.01.2021",
-      "combined": false
     }
   ],
   "profit": [
@@ -26,6 +17,18 @@
       "category": "ll",
       "date": "17.01.2021",
       "combined": false
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "title": "Кино",
+      "combined": true
+    },
+    {
+      "id": 2,
+      "title": "Семья",
+      "combined": true
     }
   ]
 }
