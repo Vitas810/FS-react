@@ -1,7 +1,6 @@
 const shortid = require('shortid');
 const db = require('../db/db');
 const { validate } = require('jsonschema');
-const category = require('../db/category.json');
 
 const getTypes = (req, res, next) => {
   const profit = db.get('profit');
@@ -23,20 +22,21 @@ const getCategory = (req, res, next) => {
   res.json({ status: 'ok', data });
 };
 
-const typeSchema = {
-  type: 'object',
-  properties: {
-    type: { type: 'string' },
-    total: { type: 'number' },
-    category: { type: 'string' },
-    comment: { type: 'string' },
-  },
-  required: ['type', 'total'],
-  additionalProperties: false,
-};
-
 const createType = (req, res, next) => {
   const { body } = req;
+
+  const typeSchema = {
+    type: 'object',
+    properties: {
+      type: { type: 'string' },
+      total: { type: 'number' },
+      category: { type: 'string' },
+      comment: { type: 'string' },
+    },
+    required: ['type', 'total'],
+    additionalProperties: false,
+  };
+
   const validationResult = validate(body, typeSchema);
 
   if (!validationResult.valid) {
