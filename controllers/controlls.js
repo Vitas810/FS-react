@@ -61,6 +61,39 @@ const createType = (req, res, next) => {
   res.json({ status: 'ok', data: newElement });
 };
 
+const createCat = (req, res, next) => {
+  const { body } = req;
+
+  const typeSchema = {
+    type: 'object',
+    properties: {
+      type: { type: 'string' },
+      category: { type: 'string' },
+    },
+    required: ['type', 'category'],
+    additionalProperties: false,
+  };
+  const validationResult = validate(body, typeSchema);
+
+  if (body.type != 'category') return next(new Error('INVALID_TYPE'));
+  if (!validationResult.valid)
+    return next(new Error('INVALID_JSON_OR_API_FORMAT_CATEGORY'));
+
+  const newCat = {
+    id: shortid.generate(),
+    type: body.type,
+    category: body.category,
+    combined: false,
+  };
+
+  try {
+    db.get(body.type).push(newCat).write();
+  } catch (error) {
+    throw new Error(error);
+  }
+  res.json({ status: 'ok', data: newCat });
+};
+
 const editTask = (req, res, next) => {
   const { id, type } = req.params;
   const editedTask = db.get(type).find({ id }).assign(req.body).value();
@@ -83,4 +116,5 @@ module.exports = {
   deleteType,
   createType,
   editTask,
+  createCat,
 };

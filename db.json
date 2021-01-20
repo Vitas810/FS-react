@@ -17,22 +17,6 @@
       "category": "ll",
       "date": "17.01.2021",
       "combined": false
-    },
-    {
-      "id": "vM65Mjtgq",
-      "type": "profit",
-      "total": 11,
-      "category": "llsss",
-      "date": "20.01.2021",
-      "combined": false
-    },
-    {
-      "id": "5nBcuYw_p",
-      "type": "profit",
-      "total": 11,
-      "category": "llsss",
-      "date": "20.01.2021",
-      "combined": false
     }
   ],
   "category": [
@@ -42,9 +26,10 @@
       "combined": true
     },
     {
-      "id": 2,
-      "title": "Семья",
-      "combined": true
+      "id": "x2XpM9puG",
+      "type": "category",
+      "category": "test",
+      "combined": false
     }
   ]
 }
