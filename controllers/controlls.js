@@ -2,11 +2,9 @@ const shortid = require('shortid');
 const db = require('../db/db');
 const { validate } = require('jsonschema');
 
-const getTypes = (req, res, next) => {
-  const profit = db.get('profit');
-  const expense = db.get('expense');
-
-  res.json({ status: 'ok', profit, expense });
+const getProfit = (req, res, next) => {
+  const data = db.get('profit');
+  res.json({ status: 'ok', data });
 };
 
 const getType = (req, res, next) => {
@@ -33,7 +31,7 @@ const createType = (req, res, next) => {
       category: { type: 'string' },
       comment: { type: 'string' },
     },
-    required: ['type', 'total'],
+    required: ['total'],
     additionalProperties: false,
   };
 
@@ -54,7 +52,7 @@ const createType = (req, res, next) => {
   };
 
   try {
-    db.get(body.type).push(newElement).write();
+    db.get('profit').push(newElement).write();
   } catch (error) {
     throw new Error(error);
   }
@@ -87,7 +85,7 @@ const createCat = (req, res, next) => {
   };
 
   try {
-    db.get(body.type).push(newCat).write();
+    db.get('profit').push(newCat).write();
   } catch (error) {
     throw new Error(error);
   }
@@ -103,14 +101,12 @@ const editTask = (req, res, next) => {
 };
 
 const deleteType = (req, res, next) => {
-  const { type, id } = req.params;
-  db.get(type).remove({ id }).write();
+  db.get('profit').remove({ id: req.params.id }).write();
 
-  res.json({ status: 'ok' });
+  res.json({ status: 'OK' });
 };
-
 module.exports = {
-  getTypes,
+  getProfit,
   getType,
   getCategory,
   deleteType,

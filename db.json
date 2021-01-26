@@ -11,11 +11,23 @@
   ],
   "profit": [
     {
-      "id": "dSdSpvm0a",
-      "type": "profit",
-      "total": 90,
+      "id": "uVB6FJQUH",
+      "type": "expense",
+      "total": 70,
       "category": "ll",
       "date": "17.01.2021",
+      "combined": false
+    },
+    {
+      "id": "0WmreAeu8",
+      "total": 12,
+      "date": "27.01.2021",
+      "combined": false
+    },
+    {
+      "id": "S1zmpdSIf",
+      "total": 18,
+      "date": "27.01.2021",
       "combined": false
     }
   ],
