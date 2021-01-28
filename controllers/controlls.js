@@ -6,6 +6,10 @@ const getProfit = (req, res, next) => {
   const data = db.get('profit');
   res.json({ status: 'ok', data });
 };
+const getCategory = (req, res, next) => {
+  const data = db.get('category');
+  res.json({ status: 'ok', data });
+};
 
 const getType = (req, res, next) => {
   const { type, id } = req.params;
@@ -13,23 +17,25 @@ const getType = (req, res, next) => {
   const data = typeElem.find((type) => String(type.id) === id);
   res.json({ status: 'ok', data });
 };
-const getCategory = (req, res, next) => {
+/* const getCategory = (req, res, next) => {
   const { type, id } = req.params;
   const typeElem = db.get(type);
   const data = typeElem.find((type) => String(type.id) === id);
   res.json({ status: 'ok', data });
 };
-
+ */
 const createType = (req, res, next) => {
   const { body } = req;
-
+  const types = body.inputHeaderValue;
+  console.log('typebody', body);
   const typeSchema = {
     type: 'object',
     properties: {
       type: { type: 'string' },
       total: { type: 'number' },
-      category: { type: 'string' },
-      comment: { type: 'string' },
+      categoryValue: { type: 'string' },
+      inputHeaderValue: { type: 'string' },
+      src: { type: 'string' },
     },
     required: ['total'],
     additionalProperties: false,
@@ -43,16 +49,17 @@ const createType = (req, res, next) => {
 
   const newElement = {
     id: shortid.generate(),
-    type: body.type,
+    type: body.inputHeaderValue,
     total: body.total,
-    category: body.category,
-    comment: body.comment,
+    categoryValue: body.categoryValue,
+    src: body.categoryValue,
     date: new Date().toLocaleDateString(),
     combined: false,
   };
 
   try {
-    db.get('profit').push(newElement).write();
+    db.get(types).push(newElement).write();
+    console.log('bodyTry', body);
   } catch (error) {
     throw new Error(error);
   }

@@ -5,6 +5,7 @@ const typeControlls = require('../controllers/controlls');
 router.post('/profit', typeControlls.createType);
 router.post('/category', typeControlls.createCat);
 router.get('/profit', typeControlls.getProfit);
+router.get('/category', typeControlls.getCategory);
 router.get('/:type/:id', typeControlls.getType);
 router.get('/:type/:id', typeControlls.editTask);
 router.get('/:type/:id', typeControlls.getCategory);

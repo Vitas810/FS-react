@@ -7,41 +7,126 @@
       "category": "ll",
       "date": "17.01.2021",
       "combined": false
+    },
+    {
+      "id": "CCk7mEq1Q",
+      "type": "expense",
+      "total": 666,
+      "categoryValue": "Транспорт",
+      "date": "28.01.2021",
+      "combined": false
+    },
+    {
+      "id": "szy3SsreU",
+      "type": "expense",
+      "total": 30,
+      "categoryValue": "Продукты",
+      "date": "28.01.2021",
+      "combined": false
     }
   ],
   "profit": [
     {
-      "id": "uVB6FJQUH",
-      "type": "expense",
-      "total": 70,
-      "category": "ll",
-      "date": "17.01.2021",
+      "id": "92nFNFzAj",
+      "total": 40,
+      "categoryValue": "Образование",
+      "date": "28.01.2021",
       "combined": false
     },
     {
-      "id": "0WmreAeu8",
-      "total": 12,
-      "date": "27.01.2021",
+      "id": "RDdeAWy1U",
+      "total": 33,
+      "categoryValue": "Подарки",
+      "date": "28.01.2021",
       "combined": false
     },
     {
-      "id": "S1zmpdSIf",
-      "total": 18,
-      "date": "27.01.2021",
+      "id": "Gzo4rTfwt",
+      "type": "profit",
+      "total": 100,
+      "categoryValue": "Транспорт",
+      "src": "Транспорт",
+      "date": "29.01.2021",
       "combined": false
     }
   ],
   "category": [
     {
       "id": 1,
-      "title": "Кино",
+      "type": "category",
+      "category": "Кафе",
+      "src": "http://localhost:8080/img/cafe.svg",
       "combined": true
     },
     {
-      "id": "x2XpM9puG",
+      "id": "x2XpM9puG1",
       "type": "category",
-      "category": "test",
+      "category": "Подарки",
+      "src": "http://localhost:8080/img/present.svg",
       "combined": false
+    },
+    {
+      "id": "x2XpM9puG2",
+      "type": "category",
+      "category": "Продукты",
+      "src": "http://localhost:8080/img/food.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG3",
+      "type": "category",
+      "category": "Образование",
+      "src": "http://localhost:8080/img/education.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG4",
+      "type": "category",
+      "category": "Семья",
+      "src": "http://localhost:8080/img/family.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG5",
+      "type": "category",
+      "category": "Транспорт",
+      "src": "http://localhost:8080/img/transport.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG6",
+      "type": "category",
+      "category": "Спорт",
+      "src": "http://localhost:8080/img/sport.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG7",
+      "type": "category",
+      "category": "Дом",
+      "src": "http://localhost:8080/img/house.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG8",
+      "type": "category",
+      "category": "Досуг",
+      "src": "http://localhost:8080/img/relax.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG9",
+      "type": "category",
+      "category": "Здоровье",
+      "src": "http://localhost:8080/img/health.svg",
+      "combined": true
+    },
+    {
+      "id": "x2XpM9puG0",
+      "type": "category",
+      "category": "Другое",
+      "src": "http://localhost:8080/img/different.svg",
+      "combined": true
     }
   ]
 }
